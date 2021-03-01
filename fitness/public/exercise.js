@@ -136,13 +136,7 @@ function handleToastAnimationEnd() {
 }
 
 
-client.messages
-  .create({
-    to: '+16479889977',
-    from: '+13852066988',
-    body: 'Your workout have been added successfully ',
-  })
-  .then(message => console.log(message.sid));
+
 
 function clearInputs() {
   cardioNameInput.value = "";
@@ -168,6 +162,14 @@ if (addButton) {
   addButton.addEventListener("click", handleFormSubmit);
 }
 toast.addEventListener("animationend", handleToastAnimationEnd);
+
+client.messages
+  .create({
+    to: '+16479889977',
+    from: '+13852066988',
+    body: 'Your workout have been added successfully ',
+  })
+  .then(message => console.log(message.sid));
 
 document
   .querySelectorAll("input")
