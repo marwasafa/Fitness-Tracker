@@ -14,14 +14,6 @@ const addButton = document.querySelector("button.add-another");
 const toast = document.querySelector("#toast");
 const newWorkout = document.querySelector(".new-workout")
 
-// Twilio Credentials
-// To set up environmental variables, see http://twil.io/secure
-const accountSid = process.env.ACed17c4910f739aebd71863338161593c;
-const authToken = process.env.d71ce532aed4495ed4c0e3dca53e4258; 
-
-
-// require the Twilio module and create a REST client
-const client = require('twilio')(accountSid, authToken);
 
 let workoutType = null;
 let shouldNavigateAway = false;
@@ -163,13 +155,7 @@ if (addButton) {
 }
 toast.addEventListener("animationend", handleToastAnimationEnd);
 
-client.messages
-  .create({
-    to: '+16479889977',
-    from: '+13852066988',
-    body: 'Your workout have been added successfully ',
-  })
-  .then(message => console.log(message.sid));
+
 
 document
   .querySelectorAll("input")
