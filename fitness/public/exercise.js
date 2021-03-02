@@ -13,14 +13,8 @@ const completeButton = document.querySelector("button.complete");
 const addButton = document.querySelector("button.add-another");
 const toast = document.querySelector("#toast");
 const newWorkout = document.querySelector(".new-workout")
-
-const onSubmit = (data, r) => {
-  alert(`Thank you for your message from ${data.email}` );
-  const templateId = 'template_l7s9qxd';
-  const serviceID = 'my_gmail';
-  sendFeedback(serviceID, templateId, { from_name: data.name, message_html: data.comment, reply_to: data.email })
-  r.target.reset();
-}
+const templateId = 'template_l7s9qxd';
+const serviceID = 'my_gmail';
 
 
 
