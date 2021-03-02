@@ -7,8 +7,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://smtpjs.com/v3/smtp.js"></script>  
+  <script src="exercise.js"></script>
   <title>Fitness Tracker</title>
 </head>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("marwa.safa@ontariotechu.net");
+      })();
+    </script>
+
 
 <body>
   <nav>
@@ -57,7 +68,7 @@
               <label for="Email Address">Email:</label>
               <input type="text" name="Email" id="Email Address" placeholder="example@gmail.com" />
             </div>
-            
+
             <div class="exercise">
               <label for="name">Exercise Name:</label>
               <input type="text" name="name" id="name" placeholder="Bench Press" />
@@ -86,6 +97,9 @@
             <button disabled class="huge ui positive button add-another">
               Add Exercise
             </button>
+            <form method="post">
+              <input type="button" value="Send Email" onclick="sendEmail()"/>
+            </form>
           </div>
         </form>
       </div>
