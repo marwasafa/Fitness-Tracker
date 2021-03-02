@@ -13,9 +13,6 @@ const completeButton = document.querySelector("button.complete");
 const addButton = document.querySelector("button.add-another");
 const toast = document.querySelector("#toast");
 const newWorkout = document.querySelector(".new-workout")
-import React from 'react';
-import './CSS/Contact.css';
-import { useForm } from "react-hook-form";
 
 const onSubmit = (data, r) => {
   alert(`Thank you for your message from ${data.email}` );
