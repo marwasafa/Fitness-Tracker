@@ -13,8 +13,9 @@ const completeButton = document.querySelector("button.complete");
 const addButton = document.querySelector("button.add-another");
 const toast = document.querySelector("#toast");
 const newWorkout = document.querySelector(".new-workout")
-const templateId = 'template_l7s9qxd';
-const serviceID = 'my_gmail';
+const templateId = document.querySelector(".template_l7s9qxd");
+const serviceID = document.querySelector(".my_gmail");
+
 
 
 
