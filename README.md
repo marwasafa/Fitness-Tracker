@@ -1,4 +1,4 @@
-# Fitness
+# Fitness Tracker
 
 This web application let the users to add and continue to add workouts and keep track of their
 progress over a week. This web application allows users to view, create and track daily
